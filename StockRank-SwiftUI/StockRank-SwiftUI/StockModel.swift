@@ -7,7 +7,13 @@
 
 import Foundation
 
-struct StockModel: Hashable {
+struct StockModel: Hashable, Identifiable {
+    // Identifiable를 사용하려면 구분자인 ID가 필요하다
+//    var id: String {
+//        return name
+//    }
+    var id: UUID = UUID()
+    
     let rank: Int
     let imageName: String
     let name: String
