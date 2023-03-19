@@ -12,22 +12,23 @@ struct StockRankView: View {
     @State var list = StockModel.list
     
     var body: some View {
-        VStack {
-            
-            List(list) { item in
-                StockRankRow(stock: item)
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+        NavigationView {
+            VStack {
+                List($list) { $item in
+                    ZStack {
+                        NavigationLink {
+                            StockDetailView(stock: $item)
+                        } label: {
+                            EmptyView()
+                        }
+                        StockRankRow(stock: $item)
+                    }
+                    .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
+                }
+                .listStyle(.plain)
+                .navigationTitle("Stock Rank")
             }
-            .listStyle(.plain)
-            .background(.black)
-//            ScrollView {
-//                ForEach(list, id: \.self) { stock in
-//                    StockRankRow(stock: stock)
-//                        .frame(height: 80)
-//                }
-//            }
-//            .background(.black)
         }
     }
 }
@@ -35,5 +36,6 @@ struct StockRankView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         StockRankView()
+            .preferredColorScheme(.dark)
     }
 }
