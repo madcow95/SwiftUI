@@ -9,7 +9,6 @@ import SwiftUI
 
 struct StockRankRow: View {
     
-    @State var heartStatus: Bool = true
     @Binding var stock: StockModel
     
     var body: some View {
@@ -42,10 +41,7 @@ struct StockRankRow: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
-                .foregroundColor(heartStatus ? .gray : .red)
-                .onTapGesture {
-                    heartStatus.toggle()
-                }
+                .foregroundColor(stock.isFavorite ? .red : .gray)
         }
         .padding()
         .frame(maxWidth: .infinity)
