@@ -16,6 +16,8 @@
 		9486F0FF283883B40069AEB0 /* AppleFramework_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486F0FE283883B40069AEB0 /* AppleFramework_SwiftUIUITestsLaunchTests.swift */; };
 		9486F10C283883D60069AEB0 /* FramewokData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9486F10B283883D60069AEB0 /* FramewokData.swift */; };
 		CD60FF0629C9C3BC00513F74 /* FrameworkListVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60FF0529C9C3BC00513F74 /* FrameworkListVIewModel.swift */; };
+		CD60FF0829C9CC3700513F74 /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60FF0729C9CC3700513F74 /* FrameworkDetailViewModel.swift */; };
+		CD60FF0C29C9D02E00513F74 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60FF0B29C9D02E00513F74 /* SafariView.swift */; };
 		CD7DD77129C7277B005668CC /* FrameworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7DD77029C7277B005668CC /* FrameworkCell.swift */; };
 		CD7DD77329C72B17005668CC /* FrameworkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7DD77229C72B17005668CC /* FrameworkDetail.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		9486F0FE283883B40069AEB0 /* AppleFramework_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFramework_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9486F10B283883D60069AEB0 /* FramewokData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramewokData.swift; sourceTree = "<group>"; };
 		CD60FF0529C9C3BC00513F74 /* FrameworkListVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkListVIewModel.swift; sourceTree = "<group>"; };
+		CD60FF0729C9CC3700513F74 /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
+		CD60FF0B29C9D02E00513F74 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		CD7DD77029C7277B005668CC /* FrameworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkCell.swift; sourceTree = "<group>"; };
 		CD7DD77229C72B17005668CC /* FrameworkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +111,8 @@
 				CD60FF0529C9C3BC00513F74 /* FrameworkListVIewModel.swift */,
 				CD7DD77029C7277B005668CC /* FrameworkCell.swift */,
 				CD7DD77229C72B17005668CC /* FrameworkDetail.swift */,
+				CD60FF0B29C9D02E00513F74 /* SafariView.swift */,
+				CD60FF0729C9CC3700513F74 /* FrameworkDetailViewModel.swift */,
 				9486F10B283883D60069AEB0 /* FramewokData.swift */,
 				9486F0E5283883B40069AEB0 /* Assets.xcassets */,
 				9486F0E7283883B40069AEB0 /* Preview Content */,
@@ -271,7 +277,9 @@
 			files = (
 				CD7DD77129C7277B005668CC /* FrameworkCell.swift in Sources */,
 				9486F0E4283883B30069AEB0 /* FrameworkListView.swift in Sources */,
+				CD60FF0829C9CC3700513F74 /* FrameworkDetailViewModel.swift in Sources */,
 				CD7DD77329C72B17005668CC /* FrameworkDetail.swift in Sources */,
+				CD60FF0C29C9D02E00513F74 /* SafariView.swift in Sources */,
 				CD60FF0629C9C3BC00513F74 /* FrameworkListVIewModel.swift in Sources */,
 				9486F10C283883D60069AEB0 /* FramewokData.swift in Sources */,
 				9486F0E2283883B30069AEB0 /* AppleFramework_SwiftUIApp.swift in Sources */,

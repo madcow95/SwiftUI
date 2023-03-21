@@ -42,12 +42,13 @@ struct FrameworkListView: View {
             }
             .navigationTitle("☀️ Apple Framework")
         }
-//        .sheet(isPresented: $viewModel.isShowingDetail) {
+        .sheet(isPresented: $viewModel.isShowingDetail) {
+            let vm = FrameworkDetailViewModel(framework: viewModel.selectedItem!)
+            FrameworkDetail(viewModel: vm)
+        }
+//        .fullScreenCover(isPresented: $viewModel.isShowingDetail) {
 //            FrameworkDetail(framework: $viewModel.selectedItem)
 //        }
-        .fullScreenCover(isPresented: $viewModel.isShowingDetail) {
-            FrameworkDetail(framework: $viewModel.selectedItem)
-        }
         
     }
 }
