@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct FrameworkListView: View {
-    
-    @State var list: [AppleFramework] = AppleFramework.list
+       
+    @StateObject var viewModel = FrameworkListViewModel()
     
     let layout: [GridItem] = [
         GridItem(.flexible()),
@@ -30,15 +30,24 @@ struct FrameworkListView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: layout) {
-                    ForEach(list) { item in
-                        FrameworkCell(framework: item)
+                    ForEach($viewModel.models) { $item in
+                        FrameworkCell(framework: $item)
+                            .onTapGesture {
+                                viewModel.isShowingDetail.toggle()
+                                viewModel.selectedItem = item
+                            }
                     }
                 }
                 .padding([.top, .leading, .trailing], 16.0)
             }
             .navigationTitle("☀️ Apple Framework")
         }
-        
+//        .sheet(isPresented: $viewModel.isShowingDetail) {
+//            FrameworkDetail(framework: $viewModel.selectedItem)
+//        }
+        .fullScreenCover(isPresented: $viewModel.isShowingDetail) {
+            FrameworkDetail(framework: $viewModel.selectedItem)
+        }
         
     }
 }

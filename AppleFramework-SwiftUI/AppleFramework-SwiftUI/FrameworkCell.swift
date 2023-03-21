@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FrameworkCell: View {
     
-    var framework: AppleFramework
+    @Binding var framework: AppleFramework
     
     var body: some View {
         VStack {
@@ -24,14 +24,11 @@ struct FrameworkCell: View {
             
             Spacer()
         }
-        .onTapGesture {
-            print(framework.name)
-        }
     }
 }
 
 struct FrameworkCell_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkCell(framework: AppleFramework.list[0])
+        FrameworkCell(framework: .constant(AppleFramework.list[0]))
     }
 }
