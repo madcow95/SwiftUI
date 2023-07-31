@@ -14,6 +14,7 @@ struct ContentView: View {
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
+            
             CircleImage()
                 .offset(y: -130)
                 .padding(.bottom, -130)
